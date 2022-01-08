@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+  <script src="script.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+  <header>
+    <section class="head">
+      <div class="container flex1">
+        <div class="left flex1">
+          <div class="logo">
+            <img src="image/logo.png" alt="">
+          </div>
+
+          <div class="search flex">
+            <i class="fas fa-search"></i>
+            <input type="text" name="" value="" placeholder="Search...">
+          </div>
+
+          <div class="select">
+            <select>
+              <option>Mega Menu</option>
+              <option>Mega Menu</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="right flex ">
+          <div class="img">
+            <img src="https://img.icons8.com/color/24/000000/usa.png" />
+          </div>
+
+          <span class="material-icons">
+            grid_view
+          </span>
+
+          <span class="material-icons">
+            crop_free
+          </span>
+
+          <span class="material-icons">
+            notifications
+          </span>
+
+          <div class="admin flex">
+            <img src="image/img1.jpg" alt="">
+            <div class="text flex">
+              <label>admin</label>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <span class="material-icons">
+            settings
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu">
+      <div class="container">
+        <div class="navbar">
+          <nav>
+            <ul id="menuitem">
+              <li>
+                <a href="#">
+                  <span class="material-icons"> home </span>
+                  <h5>Dashboard</h5>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li>
+                <a href="product.html">
+                  <span class="material-icons"> drag_indicator </span>
+                  <h5> UI Element</h5>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li>
+                <a href="index.html">
+                  <span class="material-icons"> widgets </span>
+                  <h5> Apps</h5>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li>
+                <a href="contact.html">
+                  <span class="material-icons"> folder_copy </span>
+                  <h5> Components</h5>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+              <li>
+                <a href="account.html">
+                  <span class="material-icons"> file_copy </span>
+                  <h5> Extra Pages</h5>
+                  <i class="fas fa-chevron-down"></i>
+                </a>
+              </li>
+
+            </ul>
+          </nav>
+          <label class="fa fa-bars" onclick="menutoggle()"></label>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <script>
+    var menuitem = document.getElementById("menuitem");
+    menuitem.style.maxHeight = "0px";
+
+    function menutoggle() {
+      if (menuitem.style.maxHeight == '0px') {
+        menuitem.style.maxHeight = "30vh"
+      } else {
+        menuitem.style.maxHeight = "0px"
+      }
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 50);
+    })
+  </script>
+
+  <section class="home">
+    <div class="container">
+      <div class="heading flex1">
+        <h3>DASHBOARD</h3>
+        <p>Dashboard / Dashboard</p>
+      </div>
+
+
+      <div class="content flex">
+        <div class="content_left">
+          <div class="top">
+            <div class="wlecome flex1">
+              <div class="text">
+                <h3>Welcome Back !</h3>
+                <label>Skote Dashboard</label>
+              </div>
+              <div class="img">
+                <img src="image/img2.png" alt="">
+              </div>
+            </div>
+
+            <div class="profile flex1">
+              <div class="box">
+                <div class="image">
+                  <img src="image/img1.jpg" alt="">
+                </div>
+                <div class="text">
+                  <p>Henry Price</p>
+                  <label>UI/UX Designer</label>
+                </div>
+              </div>
+
+              <div class="box">
+                <p>125</p>
+                <label>Project</label> <br>
+                <button>
+                  View Profile
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+
+              <div class="box">
+                <p>$1248</p>
+                <label>Revenue</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="earning">
+            <div class="flex1">
+              <div class="box">
+                <h3>Monthly Earing</h3>
+                <label>This Month</label>
+                <h2>$34,000</h2>
+                <p> <span>12% <i class="fas fa-long-arrow-up"></i> </span> From previous period </p>
+                <button>
+                  View More
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+              </div>
+
+              <div class="chart box">
+                <div>
+                  <div id="chart"></div>
+                </div>
+              </div>
+            </div>
+            <p>We craft digital, graphic and dimensional thinking.</p>
+          </div>
+        </div>
+
+        <div class="content_right">
+          <div class="right_top grid">
+            <div class="rbox flex1">
+              <div class="text">
+                <h4>Order</h4>
+                <h2>1,235</h2>
+              </div>
+              <div class="icon">
+                <span class="material-icons"> folder_copy </span>
+              </div>
+            </div>
+            <div class="rbox flex1">
+              <div class="text">
+                <h4>Order</h4>
+                <h2>1,235</h2>
+              </div>
+              <div class="icon">
+                <span class="material-icons"> file_download </span>
+              </div>
+            </div>
+            <div class="rbox flex1">
+              <div class="text">
+                <h4>Order</h4>
+                <h2>1,235</h2>
+              </div>
+              <div class="icon">
+                <span class="material-icons"> sell </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bar">
+            <div class="heading flex1">
+              <h5>Email Sent</h5>
+
+              <div class="date flex1">
+                <h4>Week</h4>
+                <h4>Month</h4>
+                <button>Year</button>
+              </div>
+            </div>
+
+            <div id="bars">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="wrapper">
+    <div class="container grid">
+      <div class="box">
+        <h3>Social Source </h3>
+        <div class="icon">
+          <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png" />
+        </div>
+        <div class="text">
+          <h4>Facebook - <span>125 sales</span> </h4>
+          <p> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Learn More <i class="fas fa-chevron-right"></i> </a>
+        </div>
+
+        <div class="scoial_icon flex1">
+          <div class="sicon">
+            <i class="fab fa-facebook"></i>
+            <h4>Facebook</h4>
+            <span>125 Sale</span>
+          </div>
+          <div class="sicon">
+            <i class="fab fa-twitter"></i>
+            <h4>Twitter</h4>
+            <span>105 Sale</span>
+          </div>
+          <div class="sicon">
+            <i class="fab fa-instagram"></i>
+            <h4>Instagram</h4>
+            <span>205 Sale</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box">
+        <h3>Activity</h3>
+
+        <div class="content">
+          <div class="abox flex1">
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <label>22 Nov</label>
+            <span class="fas fa-long-arrow-alt-right"></span>
+            <p>Responded to need “Volunteer Activities</p>
+          </div>
+          <div class="abox flex1">
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <label>17 Nov</label>
+            <span class="fas fa-long-arrow-alt-right"></span>
+            <p>Everyone realizes why a new common language would be desirable... </p>
+          </div>
+          <div class="abox flex1">
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <label>15 Nov</label>
+            <span class="fas fa-long-arrow-alt-right"></span>
+            <p>Joined the group “Boardsmanship Forum”</p>
+          </div>
+          <div class="abox flex1">
+            <i class="far fa-arrow-alt-circle-right"></i>
+            <label>18 Nov</label>
+            <span class="fas fa-long-arrow-alt-right"></span>
+            <p>Responded to need “In-Kind Opportunity”</p>
+          </div>
+          <button>
+            View Profile
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="box location">
+        <div class="text ">
+          <h3>Top Cities Selling Product</h3>
+          <img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/889AEE/external-location-map-pin-flatart-icons-outline-flatarticons-10.png" />
+          <h2>1,456</h2>
+          <span>San Francisco</span>
+        </div>
+
+        <div id="loac">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="table">
+    <div class="container">
+
+      <h3>Latest Transaction</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th> <input type="checkbox"> </th>
+            <th>Order Id</th>
+            <th>Billing Name</th>
+            <th>Date</th>
+            <th>Total</th>
+            <th>Payment Status</th>
+            <th>Payment Method</th>
+            <th>View Details</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Neal Matthews</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="green">Paid</span> </td>
+            <td><i class="fab fa-cc-mastercard"></i> Mastercard</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Juan Mitchell</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="red">Chargeback</span> </td>
+            <td><i class="fab fa-cc-visa"></i> Visa</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Jamal Burnett</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="green">Pad</span> </td>
+            <td><i class="fab fa-cc-paypal"></i> Paypal</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Neal Matthews</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="green">Paid</span> </td>
+            <td><i class="fab fa-cc-mastercard"></i> Mastercard</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Juan Mitchell</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="yellow">Refund</span> </td>
+            <td><i class="fab fa-cc-visa"></i> Visa</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"></td>
+            <td>#SK2548</td>
+            <td>Jamal Burnett</td>
+            <td>07 Oct, 2019</td>
+            <td>$400</td>
+            <td> <span class="green">Pad</span> </td>
+            <td><i class="fab fa-cc-paypal"></i> Paypal</td>
+            <td> <button>View Details</button> </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        <ul>
+          <li><i class="fas fa-chevron-left"></i> </li>
+          <li class="active">1</li>
+          <li>2</li>
+          <li>3</li>
+          <li><i class="fas fa-chevron-right"></i> </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="container flex1">
+      <span>2022 © Skote.</span>
+      <span>Design & Develop by GorkCoder</span>
+    </div>
+  </footer>
+  <!-- chart js-->
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="script.js" charset="utf-8"></script>
+  <!-- chart js-->
+</body>
+
+</html>
